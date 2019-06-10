@@ -42,37 +42,37 @@ RBDOOM-3-BFG Readme - https://github.com/RobertBeckebans/RBDOOM-3-BFG
 
 This file contains the following sections:
 
-	1. [SYSTEM REQUIREMENTS](#1-system-requirements)
+  1. [SYSTEM REQUIREMENTS](#1-system-requirements)
 
-	2. [GENERAL NOTES]()
+  2. [GENERAL NOTES](#2-general-notes)
 
-	3. [INSTALLATION, GETTING THE GAMEDATA, RUNNING THE GAME]()
+  3. [INSTALLATION, GETTING THE GAMEDATA, RUNNING THE GAME](#3-installation-getting-the-gamedata-running-the-game)
 
-	4. [NEW FEATURES]()
+  4. [NEW FEATURES](#4-new-features)
 
-	5. [CHANGES]()
+  5. [CHANGES](#5-changes)
 
-	6. [CONTROLS]()
+  6. [CONTROLS](#6-controls)
+ 
+  7. [FLICKSYNC](#7-flicksync)
 
-	7. [FLICKSYNC]()
+  8. [VR OPTIONS](#8-vr-options)
 
-	8. [VR OPTIONS]()
+  9. [CONSOLE VARIABLES](#9-console-variables)
 
-	9. [CONSOLE VARIABLES]()
+  10. [KNOWN ISSUES](#10-known-issues)
 
-	10. [KNOWN ISSUES]()
+  11. [GETTING THE SOURCE CODE](#11-getting-the-source-code)
 
-	11. [GETTING THE SOURCE CODE]()
+  12. [COMPILING ON WINDOWS WITH VISUAL C++ 2013, 2015, OR 2017 EXPRESS / COMMUNITY](user-content-12-compiling-on-windows-with-visual-c-2013-2015-or-2017-express--community)
 
-	12. [COMPILING ON WINDOWS WITH VISUAL C++ 2013, 2015, OR 2017 EXPRESS / COMMUNITY]()
+  13. [COMPILING ON LINUX](#compiling-on-linux)
 
-	13. [COMPILING ON LINUX]()
+  14. [BUG REPORTS](#bug-reports)
 
-	14. [BUG REPORTS]()
+  15. [LICENSE](#license)
 
-	15. [LICENSE]()
-
-	16. [CODE LICENSE EXCEPTIONS]()
+  16. [CODE LICENSE EXCEPTIONS](#code-license-exceptions)
 
 
 # 1) SYSTEM REQUIREMENTS
@@ -113,14 +113,16 @@ http://store.steampowered.com/app/208200/
 Saved games:
 ------------
 The saved game folder is:
-%UserProfile%\Saved Games\id Software\DOOM 3 BFG\Fully Possessed
+
+    %UserProfile%\Saved Games\id Software\DOOM 3 BFG\Fully Possessed
 
 Your settings are also saved there as vr_oculus.cfg and vr_openvr.cfg
-You can delte the those setting files to return to default settings.
+You can delete the those setting files to return to default settings.
 
 It will also try to load games (with partial success) from:
-%UserProfile%\Saved Games\id Software\DOOM 3 BFG\base
-%UserProfile%\Saved Games\id Software\RBDOOM 3 BFG\base
+
+    %UserProfile%\Saved Games\id Software\DOOM 3 BFG\base
+    %UserProfile%\Saved Games\id Software\RBDOOM 3 BFG\base
 
 Games loaded from other versions, other mods, or different texture packs
 will have some glitches until you complete the level (which may not always be
@@ -201,7 +203,7 @@ however this is beyond the scope of this document.
 
 5. Installing the mod:
 
-   Start the Doom3BFGVR_Fully_Possessed_Alpha022.exe installer.
+   Start the `Doom3BFGVR_Fully_Possessed_Alpha022.exe` installer.
 
    If Doom 3 BFG was not originally installed on your main Steam hard-drive, change the install path
    to reflect the Doom 3 BFG installation directory. If you have enough disk space, it is recommended
@@ -234,65 +236,64 @@ however this is beyond the scope of this document.
 # 4) NEW FEATURES
 
 New in 0.23:
-	Spanish voice commands (to use, replace dict/voice.dict with dict/voiceSpanish.dict)
+* Spanish voice commands (to use, replace dict/voice.dict with dict/voiceSpanish.dict)
 
 New in 0.21-Alpha-WMR (WMR Joystick support) (unofficial):
-	Windows Mixed Reality Joystick support
+* Windows Mixed Reality Joystick support
 
 New in 0.21a (unreleased):
-	Doom VFR style teleport and jet-strafe
-	Added headshot damage multiplier vr_headshotMultiplier (defaults to 2.5x)
-	Improved arm and body inverse kinematics and leaning, body now automatically turns
-	Screen blanking if eye moved into a solid.
-	Additional cinematic modes (vr_cinematic : now three modes, immersive, cropped, and projected).
-	Added enhanced support for camera cuts to improve cutscenes in VR.
-	Added cvar adjustable choke to shotgun to tame pellet spread.
-	Added instant player acceleration/decelaration when using artifical movement vr_instantAccel
-	Improved FOV reduction border code for better stereo overlap.
-	Holster slot states now persist thru level transitions and game saves/loads.
-	Updated player models/anims with higher def hands, better hand poses on weapons,
-		and initial controller based finger poses. ( vr_useHandPoses )
-	Added optional push to talk button for voice commands
-	Fixed Hell tunnel teleport camera issue.
-	Fixed issue with artifact/soul cube weapon axis.
-	Teleporting now updates body orientation to direction of teleport.
-	Enable teleportation in final boss fight of standard campaign.
-	Fixed a few bugs with in-game GUIs.
-
-	Fix loading saved games from other versions and mods.
-	ATI / AMD graphics card support. ( Fix black menu screens )
-	Voice command for "fists" has changed to "weapon fists" to prevent false recognitions.
-	vr_voiceMinVolume console variable to prevent false recognitions.
-	Scaled ammo, weapons, and keycards to correct sizes.
-	Option to use floor height and other view heights.
-	World Scale option.
-	vr_chibi head scale console command.
-	More laser sight options.
-	Head tracking in the main menu.
-	Holster slots work better with the PDA and QuickSave.
-	Allow path names longer than 260 chars ( fixes some crashes on start/level load ).
-	Slightly improve voice commands.
-	Default keyboard / mouse controls.
-	Less debug prints for sound effects.
-	Improved player hand models.
-	Basic mirrow window resizing via mouse drag.
-	Initial optional oculus touch hand pose support ( Off by default -
-		optionally enabled  via vr_useHandPoses cvar. This is not fully implemented
-		yet. Currently limited to when hands are empty or when the player hand is
-		in a gui.  Object manipulation is not implemented yet. )
+* Doom VFR style teleport and jet-strafe
+* Added headshot damage multiplier vr_headshotMultiplier (defaults to 2.5x)
+* Improved arm and body inverse kinematics and leaning, body now automatically turns
+* Screen blanking if eye moved into a solid.
+* Additional cinematic modes (vr_cinematic : now three modes, immersive, cropped, and projected).
+* Added enhanced support for camera cuts to improve cutscenes in VR.
+* Added cvar adjustable choke to shotgun to tame pellet spread.
+* Added instant player acceleration/decelaration when using artifical movement vr_instantAccel
+* Improved FOV reduction border code for better stereo overlap.
+* Holster slot states now persist thru level transitions and game saves/loads.
+* Updated player models/anims with higher def hands, better hand poses on weapons,
+  and initial controller based finger poses. ( vr_useHandPoses )
+* Added optional push to talk button for voice commands
+* Fixed Hell tunnel teleport camera issue.
+* Fixed issue with artifact/soul cube weapon axis.
+* Teleporting now updates body orientation to direction of teleport.
+* Enable teleportation in final boss fight of standard campaign.
+* Fixed a few bugs with in-game GUIs.
+* Fix loading saved games from other versions and mods.
+* ATI / AMD graphics card support. ( Fix black menu screens )
+* Voice command for "fists" has changed to "weapon fists" to prevent false recognitions.
+* `vr_voiceMinVolume` console variable to prevent false recognitions.
+* Scaled ammo, weapons, and keycards to correct sizes.
+* Option to use floor height and other view heights.
+* World Scale option.
+* vr_chibi head scale console command.
+* More laser sight options.
+* Head tracking in the main menu.
+* Holster slots work better with the PDA and QuickSave.
+* Allow path names longer than 260 chars ( fixes some crashes on start/level load ).
+* Slightly improve voice commands.
+* Default keyboard / mouse controls.
+* Less debug prints for sound effects.
+* Improved player hand models.
+* Basic mirror window resizing via mouse drag.
+* Initial optional oculus touch hand pose support ( Off by default -
+  optionally enabled  via vr_useHandPoses cvar. This is not fully implemented
+  yet. Currently limited to when hands are empty or when the player hand is
+  in a gui.  Object manipulation is not implemented yet. )
 
 New in 0.21:
-	Talking waking monsters is fixed.
-	Loading all saved games from 0.020 is fixed (not really).
-	You can now load most saved games from RBDoom 3 BFG (with major issues).
-	You can now load all saved games from version 0.015 (with major issues).
-	Improved performance.
-	There's a menu option for Asynchronous SpaceWarp.
-	You can now chose to walk in the direction of either hand when walking.
-	Language is now detected based on sound files not .lang files.
-	Added QuakeCon style teleport option.
+* Talking waking monsters is fixed.
+* Loading all saved games from 0.020 is fixed (not really).
+* You can now load most saved games from RBDoom 3 BFG (with major issues).
+* You can now load all saved games from version 0.015 (with major issues).
+* Improved performance.
+* There's a menu option for Asynchronous SpaceWarp.
+* You can now chose to walk in the direction of either hand when walking.
+* Language is now detected based on sound files not .lang files.
+* Added QuakeCon style teleport option.
 	http://www.gamespot.com/articles/doom-may-have-solved-vrs-traversal-problem/1100-6442439/
-	Added vr_hmdPerfHud console variable to debug framerate issues.
+* Added vr_hmdPerfHud console variable to debug framerate issues.
 
 
 DOOM3-BFG VR : Fully Possessed offers many new features:
@@ -321,52 +322,51 @@ Native support for the Oculus Rift and Touch via the Oculus SDK when detected.
 
 	Teleportation support:
 
-	  A parabolic aiming beam identifies areas the player can teleport to, as identified by
-	  the game AAS system. Teleporting to a location will cause the player to activate all in
-	  game 'triggers' along the path the player would walk to reach the destination.  This
-	  includes activating cutscenes, alerting or activating monsters, triggering any in game
-	  scripted events, and taking any environmental damage that the player would incur along
-	  this route. Players may not teleport through closed doors, or to areas the AAS system
-	  has marked as unreachable by the player.
+	A parabolic aiming beam identifies areas the player can teleport to, as identified by
+	the game AAS system. Teleporting to a location will cause the player to activate all in
+	game 'triggers' along the path the player would walk to reach the destination.  This
+	includes activating cutscenes, alerting or activating monsters, triggering any in game
+	scripted events, and taking any environmental damage that the player would incur along
+	this route. Players may not teleport through closed doors, or to areas the AAS system
+	has marked as unreachable by the player.
 
-	  LIMITATIONS:  Doom 3 was not initially designed with the idea of teleportation in mind.
-	  Doom 3 uses an Area Awareness System (AAS) to determine if a location is reachable by a
-	  character in the game, and then generate a path to that point. AAS files have been
-	  generated for the player for most of the levels in the game, but there are limitations.
-	  Issues can happen for example if trying to teleport onto a desk - you will teleport to
-	  the desk but then be bounced to the floor, just as if you had tried to jump on the desk.
-	  The AAS system is also currently unable to identify areas that are only reachable by
-	  ladder, so it is not currently possible to teleport to an area if the only way to reach
-	  it is via ladder. Additionally, there are a few small	areas in the game the AAS system
-	  is not aware of, and therefore cannot be teleported to. In these instances, the player
-	  will need to use normal locomotion to reach these areas and continue the game.
+	LIMITATIONS:  Doom 3 was not initially designed with the idea of teleportation in mind.
+	Doom 3 uses an Area Awareness System (AAS) to determine if a location is reachable by a
+	character in the game, and then generate a path to that point. AAS files have been
+	generated for the player for most of the levels in the game, but there are limitations.
+	Issues can happen for example if trying to teleport onto a desk - you will teleport to
+	the desk but then be bounced to the floor, just as if you had tried to jump on the desk.
+	The AAS system is also currently unable to identify areas that are only reachable by
+	ladder, so it is not currently possible to teleport to an area if the only way to reach
+	it is via ladder. Additionally, there are a few small	areas in the game the AAS system
+	is not aware of, and therefore cannot be teleported to. In these instances, the player
+	will need to use normal locomotion to reach these areas and continue the game.
 
 	Full room-scale support.
 
-	  Your character can walk around and crouch using your real life motion. Walking in real
-	  life allows you to walk around in the game, including walking up and down stairs or off
-	  ledges.  You can push small shipping containers and other items with real life motion.
-	  Solid objects cannot be walked through, but they can be leaned over to some degree.
-	  Jumping via real life motion is not supported.
+	Your character can walk around and crouch using your real life motion. Walking in real
+	life allows you to walk around in the game, including walking up and down stairs or off
+	ledges.  You can push small shipping containers and other items with real life motion.
+	Solid objects cannot be walked through, but they can be leaned over to some degree.
+	Jumping via real life motion is not supported.
 
 	Gamepad and Motion Controller locomotion:
 
-	  Gamepad or Motion Controller Pads, Sticks, or Buttons can be used for artificial
-	  locomotion.  Options are included for controller relative movement ( Onward style ),
-	  and normal gamepad style movement controls.  There are a variety of options available
-	  to the player, including smooth turning, comfort (snap) turning, and multiple comfort
-	  options to reduce the effects of VR sickness when using artificial movement.  All of the
-	  controls can be rebound or disabled ( for example, turning or strafe can be removed
-	  completely from the controllers ), and the various comfort options enabled or disabled.
-	  These changes can be easily made in game via touch screen access to VR specific game
-	  menus using the PDA.
+	Gamepad or Motion Controller Pads, Sticks, or Buttons can be used for artificial
+	locomotion.  Options are included for controller relative movement ( Onward style ),
+	and normal gamepad style movement controls.  There are a variety of options available
+	to the player, including smooth turning, comfort (snap) turning, and multiple comfort
+	options to reduce the effects of VR sickness when using artificial movement.  All of the
+	controls can be rebound or disabled ( for example, turning or strafe can be removed
+	completely from the controllers ), and the various comfort options enabled or disabled.
+	These changes can be easily made in game via touch screen access to VR specific game
+	menus using the PDA.
 
 	Comfort Options:
 
-	  There are various locomotion options available to assist in preventing motion sickness,
-	  including comfort ( snap ) turning, third person movement, movement based FOV reduction,
-	  slow motion movement, and using the Chaperone boundaries to provide a static reference.
-
+	There are various locomotion options available to assist in preventing motion sickness,
+	including comfort ( snap ) turning, third person movement, movement based FOV reduction,
+	slow motion movement, and using the Chaperone boundaries to provide a static reference.
 
 - Voice Commands:
 
@@ -464,87 +464,86 @@ Native support for the Oculus Rift and Touch via the Oculus SDK when detected.
 
 # 6) CONTROLS
 
-* IMPORTANT * ALL CONTROLS CAN BE EASILY CUSTOMIZED/REMAPPED BY THE USER
+*IMPORTANT* ALL CONTROLS CAN BE EASILY CUSTOMIZED/REMAPPED BY THE USER
 
-	Un-Binding or Binding controls
-	------------------------------
+Un-Binding or Binding controls
+------------------------------
 
-	  Any axis or button can be re-mapped to any movement or control function.
-	  Rebinding controls is accomplished through the 'Settings->Controls->Key Bindings' menu.
-	  This menu is available from the Main Menu when the game is first launched, or
-	  by pressing the System Menu button in game, and selecting the 'Settings->Controls->
-	  Key	Bindings' menu on the PDA.
+Any axis or button can be re-mapped to any movement or control function.
+Rebinding controls is accomplished through the 'Settings->Controls->Key Bindings' menu.
+This menu is available from the Main Menu when the game is first launched, or
+by pressing the System Menu button in game, and selecting the 'Settings->Controls->
+Key	Bindings' menu on the PDA.
 
-	  Be careful not to speak when binding a control, or you will rebind what talking does.
-	  You can't rebind specific voice commands. Edit the dict file instead.
-	  The thumb rests on the Touch controllers can be bound, so be careful not to bump them.
+Be careful not to speak when binding a control, or you will rebind what talking does.
+You can't rebind specific voice commands. Edit the dict file instead.
+The thumb rests on the Touch controllers can be bound, so be careful not to bump them.
 
-	  You can use the right joystick and trigger to highlight and select an action.
-	  If you are in game and using the PDA to adjust settings, you may use motion controls
-	  and your virtual finger to access the menu as a touch screen.  Touch an entry once to
-	  highlight, and touch again to select.
+You can use the right joystick and trigger to highlight and select an action.
+If you are in game and using the PDA to adjust settings, you may use motion controls
+and your virtual finger to access the menu as a touch screen.Touch an entry once to
+highlight, and touch again to select.
 
-	  Use the joystick or touch controls to highlight a command and see its current bindings.
-	  If available, button graphics will identify a bound control, otherwise a text descriptor
-	  is used. If the list of bindings is longer than the available space in the menu, the full
-	  binding list for the selected action is listed (without button graphics) at the bottom
-	  of the screen.
+Use the joystick or touch controls to highlight a command and see its current bindings.
+If available, button graphics will identify a bound control, otherwise a text descriptor
+is used. If the list of bindings is longer than the available space in the menu, the full
+binding list for the selected action is listed (without button graphics) at the bottom
+of the screen.
 
-	  Select the highlighted action with the trigger or by tapping. Once selected, you can unbind
-	  a currently bound control or add a new binding. To unbind a control, simply press the axis
-	  or button you would like to unbind and it will be removed from the list. To bind a control,
-	  simply press the desired button or axis and it will be added to the binding list.  If the
-	  desired button/axis	is currently bound to another action, you will be asked if you want to
-	  continue and reassign it to this command ( removing the existing binding ), or to cancel.
+Select the highlighted action with the trigger or by tapping. Once selected, you can unbind
+a currently bound control or add a new binding. To unbind a control, simply press the axis
+or button you would like to unbind and it will be removed from the list. To bind a control,
+simply press the desired button or axis and it will be added to the binding list.If the
+desired button/axis	is currently bound to another action, you will be asked if you want to
+continue and reassign it to this command ( removing the existing binding ), or to cancel.
 
-	  Changing comfort ( snap ) turning:
+Changing comfort ( snap ) turning:
 
-	    By default, the game is configured to use comfort or snap turning.
-	    This can be easily changed via the Settings->VR Options->Comfort Options
-	    menu, under the Turning option.  Cycle through the various options to select the turning
-	    mode you prefer.  ( Analog mode provides the typical smooth turning function - however
-	    this is one of the most common cause of VR sickness.)
+By default, the game is configured to use comfort or snap turning.
+This can be easily changed via the Settings->VR Options->Comfort Options
+menu, under the Turning option.Cycle through the various options to select the turning
+mode you prefer.( Analog mode provides the typical smooth turning function - however
+this is one of the most common cause of VR sickness.)
 
-	    Alternative, you may manually rebind Turn Left, Turn Right, Comfort Turn Left, and
-	    Comfort Turn Right in the Settings->Controls->Key Bindings menu.
-
+Alternative, you may manually rebind Turn Left, Turn Right, Comfort Turn Left, and
+Comfort Turn Right in the Settings->Controls->Key Bindings menu.
 
 
 Default controls for the Oculus Touch, HTC Vive, and Gamepad
 ------------------------------------------------------------
 
-*	Read each section carefully. The controls behave differently depending
-	on if you are playing the game or using a menu or the PDA. *
+*Read each section carefully. The controls behave differently depending
+	on if you are playing the game or using a menu or the PDA.*
 
 
-	Walking and crouching in real life are reflected in the game. You can
-	walk up and down steps, over ledges, or push small objects by walking in
-	real life.  Crouching can also be controlled via button, see below.
+Walking and crouching in real life are reflected in the game. You can
+walk up and down steps, over ledges, or push small objects by walking in
+real life.  Crouching can also be controlled via button, see below.
 
-	By default, the flashlight ( or PDA when active ) are held in the left hand,
-	and the weapon is held in the right hand.  This can be changed by picking up the
-	weapon or PDA from it's slot with your other hand, or through the VR Options->
-	Character Options: Weapon Hand menu entry.
+By default, the flashlight ( or PDA when active ) are held in the left hand,
+and the weapon is held in the right hand.  This can be changed by picking up the
+weapon or PDA from it's slot with your other hand, or through the VR Options->
+Character Options: Weapon Hand menu entry.
 
-	Grenades are thrown via motion controls - press
-	the trigger to start the throw, swing your arm and release the trigger to throw.
+Grenades are thrown via motion controls - press
+the trigger to start the throw, swing your arm and release the trigger to throw.
 
 
-  ### Default Control Bindings: Oculus Touch
+ ### Default Control Bindings: Oculus Touch
 
-	*IN MENUS OR PDA:
+ * IN MENUS OR PDA
 
-	  Use either stick to highlight menu entries.
-	  Press either trigger to select.
-	  Press Y or Grip to go back/exit.
+  Use either stick to highlight menu entries.
+  Press either trigger to select.
+  Press Y or Grip to go back/exit.
 
-	  If you are using the PDA, or the System Menus on the PDA in game,
-	  you can use your virtual finger to select menu items just like using
-	  a touch screen.
+  If you are using the PDA, or the System Menus on the PDA in game,
+  you can use your virtual finger to select menu items just like using
+  a touch screen.
 
-	* GAMEPLAY CONTROLS:
+ * GAMEPLAY CONTROLS
 
-	  LEFT CONTROLLER:
+  LEFT CONTROLLER:
 
 	    By default, the LEFT controller/hand will aim the flashlight, once equipped.
 
