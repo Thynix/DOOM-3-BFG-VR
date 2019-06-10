@@ -31,8 +31,7 @@ DOOM-3-BFG-VR was built using an older version of the RBDOOM3-BFG port.
 RBDOOM-3-BFG Readme - https://github.com/RobertBeckebans/RBDOOM-3-BFG
 
 
-0) CONTENTS
-===========
+# 0) CONTENTS
 
 This file contains the following sections:
 
@@ -69,8 +68,7 @@ This file contains the following sections:
 	16. [CODE LICENSE EXCEPTIONS]()
 
 
-1) SYSTEM REQUIREMENTS
-======================
+# 1) SYSTEM REQUIREMENTS
 
 Minimum system requirements:
 
@@ -92,8 +90,7 @@ Recommended system requirements:
 	VR: HTC Vive or Oculus Rift CV1 with Touch and roomscale sensors
 
 
-2) GENERAL NOTES
-================
+# 2) GENERAL NOTES
 
 This release does not contain any game data, the game data is still
 covered by the original EULA and must be obeyed as usual.
@@ -153,14 +150,14 @@ Mods:
 The Doom 3 BFG Edition GPL Source Code release allows mod editing. In order for it to accept any change in your
 mod directory, you should first specify your mod directory adding the following command to the launcher:
 
-The fs_game mod directory is used exclusively by DOOM3-BFG VR : Fully Possessed and should not be used by other
-mods. Additional mods can my use the fs_game_base directory
+The `fs_game` mod directory is used exclusively by DOOM3-BFG VR : Fully Possessed and should not be used by other
+mods. Additional mods can my use the `fs_game_base` directory
 
-"+set fs_game_base modDirectoryName"
+`+set fs_game_base modDirectoryName`
 
-so it would end up looking like: Doom3BFGVR +set fs_game_base mymod
+so it would end up looking like: `Doom3BFGVR +set fs_game_base mymod`
 
-This will result in the game searching the Fully Possessed directory, followed by the modDirectoryName directory,
+This will result in the game searching the Fully Possessed directory, followed by the `modDirectoryName` directory,
 and finally the BASE directory when loading assets.
 
 Binary mods from Classic Doom 3 (non-BFG) mods are not supported.
@@ -168,8 +165,7 @@ It is possible however to utilize some of the assets from Classic Doom mods,
 however this is beyond the scope of this document.
 
 
-3) INSTALLATION, GETTING THE GAMEDATA, RUNNING THE GAME
-=======================================================
+# 3) INSTALLATION, GETTING THE GAMEDATA, RUNNING THE GAME
 
 1. Make sure you have Doom 3 BFG Edition installed in Steam.
    Doom 3 BFG Edition is also available from Good Old Games, but I haven't tested that version.
@@ -228,8 +224,7 @@ however this is beyond the scope of this document.
 10. If you run into bugs, please report them. ( see section 9 )
 
 
-4. NEW FEATURES
-===============
+# 4) NEW FEATURES
 
 New in 0.23:
 	Spanish voice commands (to use, replace dict/voice.dict with dict/voiceSpanish.dict)
@@ -423,8 +418,7 @@ Native support for the Oculus Rift and Touch via the Oculus SDK when detected.
 	expected.
 
 
-5) CHANGES
-==========
+# 5) CHANGES
 
 - VR support (Doom 3 only, 1 and 2 use a virtual screen in VR)
 
@@ -461,8 +455,7 @@ Native support for the Oculus Rift and Touch via the Oculus SDK when detected.
 	make the game less dark. https://developer.valvesoftware.com/wiki/Half_Lambert
 
 
-6) CONTROLS
-===========
+# 6) CONTROLS
 
 * IMPORTANT * ALL CONTROLS CAN BE EASILY CUSTOMIZED/REMAPPED BY THE USER
 
@@ -1094,8 +1087,7 @@ Default controls for the Oculus Touch, HTC Vive, and Gamepad
 	      		Consentient
 
 
-7) FLICKSYNC
-============
+# 7) FLICKSYNC
 
 Flicksync is an experimental mode based on the book Ready Player One by Ernest Cline.
 In the book, players in a virtual environment participate in and act out the lines of
@@ -1186,8 +1178,7 @@ except for the "no cutscenes" option.
 You will see SCORE: 0 on the menus if you are in Flicksync mode.
 
 
-8) VR Options
-=============
+# 8) VR Options
 
 VR Related game changes can be made from the Settings->VR Options menu.
 
@@ -1914,8 +1905,7 @@ VR Related game changes can be made from the Settings->VR Options menu.
 	  Manual Profile IPD:	This IPD will be used if Active Profile is set to Manual.
 
 
-9) CONSOLE VARIABLES AND COMMANDS
-=================================
+# 9) CONSOLE VARIABLES AND COMMANDS
 
 Access the console with the ~` key, or you can add these to your config file in:
 %UserProfile%\Saved Games\id Software\DOOM 3 BFG\Fully Possessed\vr_oculus.cfg
@@ -2370,8 +2360,7 @@ vr_cinematics 0 INTEGER - Cinematic type. 0 = Immersive, 1 = Cropped, 2 = Projec
 r_useShadowMapping 0 - Use soft shadow mapping instead of hard stencil shadows
 
 
-10) KNOWN ISSUES
-================
+# 10) KNOWN ISSUES
 
 See https://github.com/KozGit/DOOM-3-BFG-VR/issues
 
@@ -2381,8 +2370,7 @@ Doom 3 wasn't designed to work with shadow maps so:
 - Some shadows might almost disappear due to the shadow filtering
 
 
-11) GETTING THE SOURCE CODE
-===========================
+# 11) GETTING THE SOURCE CODE
 
 This project's GitHub.net Git repository can be checked out through Git with the
 following instruction set:
@@ -2395,8 +2383,7 @@ If you don't want to use git, you can download the source as a zip file at
 Init/Update the submodules in Git to get OpenVR.
 
 
-12) COMPILING ON WINDOWS WITH VISUAL C++ 2013, 2015, OR 2017 EXPRESS / COMMUNITY
-================================================================================
+# 12) COMPILING ON WINDOWS WITH VISUAL C++ 2013, 2015, OR 2017 EXPRESS / COMMUNITY
 
 1. Download and install the free Express or Community version of Visual C++ 2013, 2015, or 2017.
 
@@ -2436,8 +2423,7 @@ Init/Update the submodules in Git to get OpenVR.
     studio. Right click on the installer.nsi file and choose Compile NSIS Script.
 
 
-13) COMPILING ON LINUX
-======================
+# 13) COMPILING ON LINUX
 
 LINUX VR:
 
@@ -2507,8 +2493,7 @@ Controller buttons don't work
 	> make
 
 
-14) BUG REPORTS
-===============
+# 14) BUG REPORTS
 
 DOOM-3-BFG VR: Fully Possessed is not perfect, it is not bug free just like all other software.
 To fixing as many problems as possible, we need as many bug reports as possible.
@@ -2538,9 +2523,7 @@ NOTE: We cannot help you with OS-specific issues like configuring OpenGL correct
 ALSA or configuring the network.
 
 
-15) LICENSE
-===========
-
+# 15) LICENSE
 
 See COPYING.txt for the GNU GENERAL PUBLIC LICENSE
 
@@ -2551,9 +2534,7 @@ please request a copy in writing from id Software at id Software LLC, c/o ZeniMa
 Suite 120, Rockville, Maryland 20850 USA.
 
 
-16) CODE LICENSE EXCEPTIONS - The parts that are not covered by the GPL
-=======================================================================
-
+# 17) CODE LICENSE EXCEPTIONS - The parts that are not covered by the GPL
 
 EXCLUDED CODE:  The code described below and contained in the Doom 3 BFG Edition GPL Source
 Code release is not part of the Program covered by the GPL and is expressly excluded from its
