@@ -15,14 +15,21 @@ Includes support for the HTC Vive via SteamVR, the Oculus Rift and Touch motion 
 Oculus SDK or SteamVR, and (in theory) Windows Mixed Reality via SteamVR.
 
 VR Implementation: /u/Samson-
-Major Contributions - Teleportation, Voice Commands, Flicksync, Bink videos, Loading other
-                      savegames, code improvements: Carl Kenner
+
+Major Contributions - Teleportation, Voice Commands, Flicksync, Bink videos, Loading other savegames, code improvements: Carl Kenner
+
 Holster slots, Crawl Space Head Collision, minor fixes: Leyland
+
 Doom VFR style teleporting, JetStrafe, Slow Mo and Tunnel vision motion sickness fixes: jckhng
+
 Spanish Voice Commands: TinoSM
+
 Windows Mixed Reality and VS2017 support: Mark Sheehan
+
 Additional VS2017 support: Bao Chi Tran Nguyen
+
 Linux support and buffer overrun fixes: Christoph Haag
+
 Originally inspired by: tmek
 
 DOOM-3-BFG-VR Readme - https://github.com/KozGit/DOOM-3-BFG-VR
@@ -35,7 +42,7 @@ RBDOOM-3-BFG Readme - https://github.com/RobertBeckebans/RBDOOM-3-BFG
 
 This file contains the following sections:
 
-	1. [SYSTEM REQUIREMENTS]()
+	1. [SYSTEM REQUIREMENTS](#1-system-requirements)
 
 	2. [GENERAL NOTES]()
 
